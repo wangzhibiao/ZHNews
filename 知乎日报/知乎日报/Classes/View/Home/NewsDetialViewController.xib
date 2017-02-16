@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="Zhc-8Y-SEB" customClass="NewsDetialViewController" customModule="知乎日报" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="9UV-5V-JOo"/>
+                <viewControllerLayoutGuide type="bottom" id="Pmz-2P-mgE"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="KXk-np-7ji">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gK-Ob-1lo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </webView>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjs-Ml-q1k" userLabel="顶部背景图">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Av-lt-qEB" userLabel="新闻图">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home_Image_Mask" translatesAutoresizingMaskIntoConstraints="NO" id="CAq-1m-R2h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图片来源" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dj-qc-kIv">
+                                <rect key="frame" x="324" y="178" width="41" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新闻等标题昂" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gw-gb-kf9">
+                                <rect key="frame" x="10" y="159" width="355" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="8Av-lt-qEB" firstAttribute="leading" secondItem="fjs-Ml-q1k" secondAttribute="leading" id="7G2-Cq-t4C"/>
+                            <constraint firstAttribute="bottom" secondItem="6Dj-qc-kIv" secondAttribute="bottom" constant="10" id="CM9-8g-FNf"/>
+                            <constraint firstAttribute="bottom" secondItem="CAq-1m-R2h" secondAttribute="bottom" id="DA2-LL-IvE"/>
+                            <constraint firstItem="CAq-1m-R2h" firstAttribute="leading" secondItem="fjs-Ml-q1k" secondAttribute="leading" id="Drf-fS-DC0"/>
+                            <constraint firstAttribute="trailing" secondItem="8Av-lt-qEB" secondAttribute="trailing" id="I1p-kl-7aG"/>
+                            <constraint firstItem="8Av-lt-qEB" firstAttribute="top" secondItem="fjs-Ml-q1k" secondAttribute="top" id="S4K-F0-jQ4"/>
+                            <constraint firstAttribute="bottom" secondItem="0Gw-gb-kf9" secondAttribute="bottom" constant="20" id="WME-gp-Hmy"/>
+                            <constraint firstItem="0Gw-gb-kf9" firstAttribute="leading" secondItem="fjs-Ml-q1k" secondAttribute="leading" constant="10" id="kqD-6d-zhO"/>
+                            <constraint firstItem="CAq-1m-R2h" firstAttribute="top" secondItem="fjs-Ml-q1k" secondAttribute="top" id="nAK-Kb-UkX"/>
+                            <constraint firstAttribute="trailing" secondItem="6Dj-qc-kIv" secondAttribute="trailing" constant="10" id="oYh-TK-lcI"/>
+                            <constraint firstAttribute="height" constant="200" id="qnY-oi-dHu"/>
+                            <constraint firstAttribute="trailing" secondItem="CAq-1m-R2h" secondAttribute="trailing" id="rgX-eq-f1o"/>
+                            <constraint firstAttribute="bottom" secondItem="8Av-lt-qEB" secondAttribute="bottom" id="wEb-JT-kc2"/>
+                            <constraint firstAttribute="trailing" secondItem="0Gw-gb-kf9" secondAttribute="trailing" constant="10" id="xfA-ev-CFF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-IV-0eg" customClass="NewsDetialToolBarView" customModule="知乎日报" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZk-Lv-ApS">
+                                <rect key="frame" x="8" y="8" width="48" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Comment_Icon_Back"/>
+                                <connections>
+                                    <action selector="backBtnClikcWithBtn:" destination="MiL-IV-0eg" eventType="touchUpInside" id="qLc-E8-ifJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpj-gA-cYV">
+                                <rect key="frame" x="101" y="8" width="48" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="News_Navigation_Next"/>
+                                <state key="highlighted" backgroundImage="News_Navigation_Next_Highlight"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMh-HU-biQ">
+                                <rect key="frame" x="183" y="8" width="48" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="News_Navigation_Vote"/>
+                                <state key="highlighted" backgroundImage="News_Navigation_Voted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-E0-U4M">
+                                <rect key="frame" x="256" y="8" width="48" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="News_Navigation_Share"/>
+                                <state key="highlighted" backgroundImage="News_Navigation_Share_Highlight"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reb-ip-HhM">
+                                <rect key="frame" x="321" y="8" width="48" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="News_Navigation_Comment"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="KZg-dH-aMI"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="backBtn" destination="yZk-Lv-ApS" id="rtO-5r-2ag"/>
+                            <outlet property="compseBtn" destination="reb-ip-HhM" id="yjA-OO-wNA"/>
+                            <outlet property="nextBtn" destination="Jpj-gA-cYV" id="THA-Uf-jua"/>
+                            <outlet property="shareBtn" destination="xN9-E0-U4M" id="e2B-vr-uYQ"/>
+                            <outlet property="zanBtn" destination="WMh-HU-biQ" id="5mg-oq-7CZ"/>
+                        </connections>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EMA-Ak-bId" userLabel="statusbar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="C3l-mh-fX4"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5gK-Ob-1lo" firstAttribute="top" secondItem="KXk-np-7ji" secondAttribute="top" id="1Kl-6f-xR2"/>
+                    <constraint firstItem="EMA-Ak-bId" firstAttribute="top" secondItem="KXk-np-7ji" secondAttribute="top" id="3W2-D7-sqe"/>
+                    <constraint firstItem="MiL-IV-0eg" firstAttribute="top" secondItem="5gK-Ob-1lo" secondAttribute="bottom" id="6AZ-Z1-DaN"/>
+                    <constraint firstItem="fjs-Ml-q1k" firstAttribute="leading" secondItem="KXk-np-7ji" secondAttribute="leading" id="6fN-1m-reY"/>
+                    <constraint firstItem="MiL-IV-0eg" firstAttribute="trailing" secondItem="5gK-Ob-1lo" secondAttribute="trailing" id="DQo-vw-eXY"/>
+                    <constraint firstItem="5gK-Ob-1lo" firstAttribute="leading" secondItem="KXk-np-7ji" secondAttribute="leading" id="UcG-v1-Kht"/>
+                    <constraint firstAttribute="trailing" secondItem="5gK-Ob-1lo" secondAttribute="trailing" id="Vxy-bL-uXZ"/>
+                    <constraint firstAttribute="bottom" secondItem="MiL-IV-0eg" secondAttribute="bottom" id="Wry-6f-GSz"/>
+                    <constraint firstAttribute="trailing" secondItem="EMA-Ak-bId" secondAttribute="trailing" id="ZsF-bx-EKJ"/>
+                    <constraint firstItem="MiL-IV-0eg" firstAttribute="top" secondItem="5gK-Ob-1lo" secondAttribute="bottom" id="aJz-vI-jRY"/>
+                    <constraint firstItem="EMA-Ak-bId" firstAttribute="leading" secondItem="KXk-np-7ji" secondAttribute="leading" id="aR2-n2-rj1"/>
+                    <constraint firstAttribute="trailing" secondItem="MiL-IV-0eg" secondAttribute="trailing" id="aiy-Ve-ROB"/>
+                    <constraint firstItem="MiL-IV-0eg" firstAttribute="leading" secondItem="KXk-np-7ji" secondAttribute="leading" id="aqI-kn-H2u"/>
+                    <constraint firstItem="fjs-Ml-q1k" firstAttribute="top" secondItem="9UV-5V-JOo" secondAttribute="bottom" constant="-20" id="cVO-1p-YL4"/>
+                    <constraint firstItem="MiL-IV-0eg" firstAttribute="leading" secondItem="5gK-Ob-1lo" secondAttribute="leading" id="jfR-oC-bso"/>
+                    <constraint firstAttribute="trailing" secondItem="fjs-Ml-q1k" secondAttribute="trailing" id="qHd-Q9-M3a"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="imageSource" destination="6Dj-qc-kIv" id="MoT-cp-riV"/>
+                <outlet property="newsImage" destination="8Av-lt-qEB" id="DvI-YW-FEn"/>
+                <outlet property="newsTitle" destination="0Gw-gb-kf9" id="RMN-fM-DfC"/>
+                <outlet property="newsWebView" destination="5gK-Ob-1lo" id="oeW-mt-F0p"/>
+                <outlet property="statusBarImg" destination="EMA-Ak-bId" id="uUz-6o-U32"/>
+                <outlet property="toolBarView" destination="MiL-IV-0eg" id="XyO-6A-3u0"/>
+                <outlet property="topBackView" destination="fjs-Ml-q1k" id="xz3-Xh-gWc"/>
+            </connections>
+            <point key="canvasLocation" x="-140.5" y="153.5"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="Comment_Icon_Back" width="48" height="38"/>
+        <image name="Home_Image_Mask" width="320" height="150"/>
+        <image name="News_Navigation_Comment" width="64" height="43"/>
+        <image name="News_Navigation_Next" width="64" height="43"/>
+        <image name="News_Navigation_Next_Highlight" width="64" height="43"/>
+        <image name="News_Navigation_Share" width="64" height="43"/>
+        <image name="News_Navigation_Share_Highlight" width="64" height="43"/>
+        <image name="News_Navigation_Vote" width="64" height="43"/>
+        <image name="News_Navigation_Voted" width="64" height="43"/>
+    </resources>
+</document>

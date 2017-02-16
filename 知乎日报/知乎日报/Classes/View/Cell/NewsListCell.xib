@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCellID" rowHeight="83" id="ZSt-cf-pKI" customClass="NewsListCell" customModule="知乎日报" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZSt-cf-pKI" id="dfo-uU-oT8">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-eL-WzQ">
+                        <rect key="frame" x="10" y="10" width="80" height="69.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="VDd-8Y-skR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这一条条新闻哈哈" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR1-Vq-BT6">
+                        <rect key="frame" x="110" y="18" width="247" height="53.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I07-pg-Et6" userLabel="分割线">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ns4-tH-LDM"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❏多图" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcx-e4-8Ll">
+                        <rect key="frame" x="58.5" y="65.5" width="29.5" height="12"/>
+                        <color key="backgroundColor" red="0.067447513341903687" green="0.12618198990821838" blue="0.25487151741981506" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I07-pg-Et6" firstAttribute="leading" secondItem="dfo-uU-oT8" secondAttribute="leading" id="0Ca-fT-JQv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="XR1-Vq-BT6" secondAttribute="trailing" constant="10" id="BLt-cb-NHf"/>
+                    <constraint firstItem="Bqx-eL-WzQ" firstAttribute="top" secondItem="dfo-uU-oT8" secondAttribute="top" constant="10" id="MII-57-NoH"/>
+                    <constraint firstItem="Pcx-e4-8Ll" firstAttribute="bottom" secondItem="Bqx-eL-WzQ" secondAttribute="bottom" constant="-2" id="Tay-Eu-KHa"/>
+                    <constraint firstItem="XR1-Vq-BT6" firstAttribute="leading" secondItem="Bqx-eL-WzQ" secondAttribute="trailing" constant="20" id="VeM-Ry-9lB"/>
+                    <constraint firstAttribute="bottom" secondItem="Bqx-eL-WzQ" secondAttribute="bottom" constant="10" id="Vkj-UN-lZ3"/>
+                    <constraint firstItem="XR1-Vq-BT6" firstAttribute="leading" secondItem="Pcx-e4-8Ll" secondAttribute="trailing" constant="22" id="Ya6-Js-vqP"/>
+                    <constraint firstItem="XR1-Vq-BT6" firstAttribute="top" secondItem="dfo-uU-oT8" secondAttribute="topMargin" constant="10" id="g7k-MX-EN6"/>
+                    <constraint firstItem="Bqx-eL-WzQ" firstAttribute="leading" secondItem="dfo-uU-oT8" secondAttribute="leading" constant="10" id="kWm-cb-qPU"/>
+                    <constraint firstItem="I07-pg-Et6" firstAttribute="top" secondItem="dfo-uU-oT8" secondAttribute="top" id="l2y-u2-IzB"/>
+                    <constraint firstAttribute="trailing" secondItem="I07-pg-Et6" secondAttribute="trailing" id="qW7-QE-CIF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XR1-Vq-BT6" secondAttribute="bottom" constant="10" id="zCC-uX-4Ak"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="duotuIcon" destination="Pcx-e4-8Ll" id="k6W-Lg-Yqk"/>
+                <outlet property="imgView" destination="Bqx-eL-WzQ" id="HnA-Bk-Wtj"/>
+                <outlet property="newsTile" destination="XR1-Vq-BT6" id="IhR-Tj-Ljm"/>
+            </connections>
+            <point key="canvasLocation" x="-194.5" y="-204"/>
+        </tableViewCell>
+    </objects>
+</document>

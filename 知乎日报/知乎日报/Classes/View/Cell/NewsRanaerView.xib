@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Vwb-gZ-oJk" customClass="NewsRanaerView" customModule="知乎日报" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8O-iY-ruV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                </scrollView>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是新闻的标题哦" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-r8-Usw">
+                    <rect key="frame" x="10" y="137" width="355" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fEq-1D-rSE">
+                    <rect key="frame" x="168" y="158" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4qe-r8-Usw" secondAttribute="trailing" constant="10" id="4kW-at-J5E"/>
+                <constraint firstItem="fEq-1D-rSE" firstAttribute="top" secondItem="4qe-r8-Usw" secondAttribute="bottom" id="9Et-3m-v08"/>
+                <constraint firstAttribute="trailing" secondItem="q8O-iY-ruV" secondAttribute="trailing" id="9w5-6T-9SX"/>
+                <constraint firstAttribute="bottom" secondItem="fEq-1D-rSE" secondAttribute="bottom" constant="5" id="Crd-C7-Hiu"/>
+                <constraint firstItem="q8O-iY-ruV" firstAttribute="leading" secondItem="Vwb-gZ-oJk" secondAttribute="leading" id="L5k-oc-TvR"/>
+                <constraint firstItem="fEq-1D-rSE" firstAttribute="centerX" secondItem="Vwb-gZ-oJk" secondAttribute="centerX" id="Wc5-XT-GHs"/>
+                <constraint firstAttribute="bottom" secondItem="q8O-iY-ruV" secondAttribute="bottom" id="aMX-Pk-SAr"/>
+                <constraint firstItem="q8O-iY-ruV" firstAttribute="top" secondItem="Vwb-gZ-oJk" secondAttribute="top" id="bSJ-EB-n7d"/>
+                <constraint firstItem="4qe-r8-Usw" firstAttribute="leading" secondItem="Vwb-gZ-oJk" secondAttribute="leading" constant="10" id="d3l-NT-fKr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="newsTitleLabel" destination="4qe-r8-Usw" id="byV-Fy-C0r"/>
+                <outlet property="pageControl" destination="fEq-1D-rSE" id="JiZ-fW-x3H"/>
+                <outlet property="scrollerView" destination="q8O-iY-ruV" id="dHu-d8-Hss"/>
+            </connections>
+            <point key="canvasLocation" x="-560" y="-121"/>
+        </view>
+    </objects>
+</document>

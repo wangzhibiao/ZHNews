@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iJE-gr-NHj" customClass="NewsTitleView" customModule="知乎日报" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go3-yf-X70">
+                    <rect key="frame" x="10" y="86" width="19" height="19"/>
+                    <state key="normal" backgroundImage="Home_Icon"/>
+                    <state key="highlighted" backgroundImage="Home_Icon_Highlight"/>
+                    <connections>
+                        <action selector="menuBtnClick:" destination="iJE-gr-NHj" eventType="touchUpInside" id="8ZH-1k-RKg"/>
+                    </connections>
+                </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mKv-Ho-6u4" userLabel="刷新控件">
+                    <rect key="frame" x="123" y="85" width="20" height="20"/>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日新闻" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSy-8m-GqF">
+                    <rect key="frame" x="153" y="84" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-0T-Uze">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="B46-id-tnf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pSy-8m-GqF" secondAttribute="bottom" constant="10" id="09J-tI-KyN"/>
+                <constraint firstAttribute="trailing" secondItem="4c7-0T-Uze" secondAttribute="trailing" id="0vB-JR-61h"/>
+                <constraint firstItem="4c7-0T-Uze" firstAttribute="leading" secondItem="iJE-gr-NHj" secondAttribute="leading" id="6YR-W9-4eI"/>
+                <constraint firstItem="4c7-0T-Uze" firstAttribute="top" secondItem="iJE-gr-NHj" secondAttribute="top" id="eKv-DP-l5K"/>
+                <constraint firstItem="pSy-8m-GqF" firstAttribute="leading" secondItem="mKv-Ho-6u4" secondAttribute="trailing" constant="10" id="eZc-ht-kmI"/>
+                <constraint firstItem="pSy-8m-GqF" firstAttribute="centerX" secondItem="iJE-gr-NHj" secondAttribute="centerX" id="h9O-TL-3h4"/>
+                <constraint firstItem="Go3-yf-X70" firstAttribute="leading" secondItem="iJE-gr-NHj" secondAttribute="leading" constant="10" id="jI5-uL-REr"/>
+                <constraint firstAttribute="bottom" secondItem="mKv-Ho-6u4" secondAttribute="bottom" constant="10" id="jgc-yQ-QCJ"/>
+                <constraint firstAttribute="bottom" secondItem="Go3-yf-X70" secondAttribute="bottom" constant="10" id="rXr-Nh-BQh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="flashIcon" destination="mKv-Ho-6u4" id="Wlo-iR-bh3"/>
+                <outlet property="meunButton" destination="Go3-yf-X70" id="sRB-kz-aKq"/>
+                <outlet property="statusBarView" destination="4c7-0T-Uze" id="Y2K-CU-bGl"/>
+                <outlet property="titleLabel" destination="pSy-8m-GqF" id="h0I-DN-1DI"/>
+            </connections>
+            <point key="canvasLocation" x="-138.5" y="-59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Home_Icon" width="19" height="19"/>
+        <image name="Home_Icon_Highlight" width="19" height="19"/>
+    </resources>
+</document>

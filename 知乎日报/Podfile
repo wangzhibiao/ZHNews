@@ -1,0 +1,18 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+
+target '知乎日报' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for 知乎日报
+pod "YYModel"
+pod "FMDB"
+pod "SVProgressHUD"
+pod "pop"
+pod 'Kingfisher', '>= 3.0'
+pod 'Alamofire', '~> 4.0'
+pod 'MJRefresh'
+pod 'Masonry'
+pod 'SnapKit', '~> 3.1.2'
+end
