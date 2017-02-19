@@ -138,15 +138,17 @@ extension NewsRanaerView: UIScrollViewDelegate {
             // 加入属性数组 以后都从这里取数据
             self.imageArray?.append(model[currentImageView.tag])
             // 加入标题
-            self.descLable.sizeToFit()
-            self.descLable.isUserInteractionEnabled = true
-            self.descLable.textColor = UIColor.white
-            self.descLable.font = UIFont.boldSystemFont(ofSize: 18)
-            self.descLable.numberOfLines = 0
+            let descl = UILabel()
+            descl.sizeToFit()
+            descl.isUserInteractionEnabled = true
+            descl.textColor = UIColor.white
+            descl.font = UIFont.boldSystemFont(ofSize: 18)
+            descl.numberOfLines = 0
+            descl.tag = 10000
             
-            self.addSubview(self.descLable)
+            currentImageView.addSubview(descl)
             // 约束
-            self.descLable.snp.makeConstraints({ (make) in
+            descl.snp.makeConstraints({ (make) in
                 make.leftMargin.equalTo(10)
                 make.rightMargin.equalTo(10)
                 make.bottomMargin.greaterThanOrEqualTo(-30)
@@ -166,9 +168,8 @@ extension NewsRanaerView: UIScrollViewDelegate {
         tagImage.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "Management_Placeholder"))
 
         // 设置标题
-        self.descLable.text = model![tagImage.tag].title
-//        print("title: \(model![tagImage.tag].title)  currentindex: \(self.currentIndex)")
-//        print("label : \(self.descLable)")
+        let descl = tagImage.viewWithTag(10000) as! UILabel
+        descl.text = model![tagImage.tag].title
         
     }
     
@@ -257,13 +258,14 @@ extension NewsRanaerView: UIScrollViewDelegate {
         
         // 复位位置
         self.scrollerView.contentOffset = CGPoint(x: CommonConst.SCREEN_W, y: 0)
+        self.descLable.isHidden = false
     }
     
     
     // 图片点击方法
     func imageClick(tap: UITapGestureRecognizer) {
         
-        let dealID = self.imageArray?[self.currentIndex].id
+        let dealID = self.imageArray?[self.currentIndex].id ?? 0
         
         // 发通知
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: RanderViewDidClickNotification), object: nil, userInfo: ["newsID":dealID])
